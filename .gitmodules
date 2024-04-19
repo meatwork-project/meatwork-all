@@ -1,0 +1,12 @@
+[submodule "meatwork-tools"]
+	path = meatwork-tools
+	url = https://github.com/meatwork-project/meatwork-tools.git
+[submodule "meatwork-cmd"]
+	path = meatwork-cmd
+	url = https://github.com/meatwork-project/meatwork-cmd.git
+[submodule "mycra"]
+	path = mycra
+	url = https://github.com/Taliro/mycra.git
+[submodule "mycra_ui"]
+	path = mycra_ui
+	url = https://github.com/Taliro/mycra-ui.git

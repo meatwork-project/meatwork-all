@@ -4,12 +4,6 @@
 [submodule "meatwork-cmd"]
 	path = meatwork-cmd
 	url = https://github.com/meatwork-project/meatwork-cmd.git
-[submodule "mycra"]
-	path = mycra
-	url = https://github.com/Taliro/mycra.git
-[submodule "mycra_ui"]
-	path = mycra_ui
-	url = https://github.com/Taliro/mycra-ui.git
 [submodule "meatwork-test"]
 	path = meatwork-test
 	url = git@github.com:meatwork-project/meatwork-test.git

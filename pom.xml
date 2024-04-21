@@ -12,8 +12,6 @@
         <module>meatwork-tools</module>
         <module>meatwork-cmd</module>
         <module>meatwork-test</module>
-        <module>mycra</module>
-        <module>mycra_ui</module>
     </modules>
 
     <properties>

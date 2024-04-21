@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gitlab.meatwork</groupId>
+    <groupId>com.meatwork</groupId>
     <artifactId>meatwork</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -14,6 +14,7 @@
         <module>meatwork-cmd</module>
         <module>mycra</module>
         <module>mycra_ui</module>
+        <module>meatwork-test</module>
     </modules>
 
     <properties>
@@ -28,6 +29,11 @@
         <reflections.version>0.10.2</reflections.version>
         <activejdbc.version>3.4-j11</activejdbc.version>
         <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
+        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+        <junit-jupiter-engine.version>5.10.2</junit-jupiter-engine.version>
+        <slf4j-api.version>2.0.7</slf4j-api.version>
+        <logback-classic.version>1.5.6</logback-classic.version>
+        <mockito-junit-jupiter.version>5.11.0</mockito-junit-jupiter.version>
     </properties>
 
     <dependencyManagement>
@@ -50,17 +56,32 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>2.0.7</version>
+                <version>${slf4j-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-simple</artifactId>
-                <version>2.0.7</version>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classic.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.javalite</groupId>
                 <artifactId>activejdbc</artifactId>
                 <version>${activejdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit-jupiter-engine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito-junit-jupiter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -104,6 +125,11 @@
                             <descriptorRef>jar-with-dependencies</descriptorRef>
                         </descriptorRefs>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

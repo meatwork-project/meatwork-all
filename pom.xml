@@ -45,7 +45,7 @@
             </activation>
         </profile>
         <profile>
-            <id>Stable</id>
+            <id>stable</id>
             <properties>
                 <revision>${verisonNumber}</revision>
             </properties>

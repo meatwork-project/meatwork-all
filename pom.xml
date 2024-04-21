@@ -9,9 +9,9 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
     <modules>
-        <module>meatwork-tools</module>
         <module>meatwork-cmd</module>
         <module>meatwork-test</module>
+        <module>meatwork-tools</module>
     </modules>
 
     <properties>

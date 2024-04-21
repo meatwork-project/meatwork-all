@@ -47,7 +47,7 @@
         <profile>
             <id>stable</id>
             <properties>
-                <revision>${versionNumber}</revision>
+                <revision>${versionNumber}-RELEASE</revision>
             </properties>
         </profile>
     </profiles>

@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <lombok.version>1.18.32</lombok.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-        <verisonNumber>1.1.0</verisonNumber>
+        <versionNumber>1.1.0</versionNumber>
         <guava.version>33.1.0-jre</guava.version>
         <guice.version>7.0.0</guice.version>
         <reflections.version>0.10.2</reflections.version>
@@ -38,7 +38,7 @@
         <profile>
             <id>development</id>
             <properties>
-                <revision>${verisonNumber}-SNAPSHOT</revision>
+                <revision>${versionNumber}-SNAPSHOT</revision>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -47,7 +47,7 @@
         <profile>
             <id>stable</id>
             <properties>
-                <revision>${verisonNumber}</revision>
+                <revision>${versionNumber}</revision>
             </properties>
         </profile>
     </profiles>
@@ -147,14 +147,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>${maven-jar-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${maven-deploy-plugin.version}</version>
-                    <configuration>
-                        <skip>true</skip>
-                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>

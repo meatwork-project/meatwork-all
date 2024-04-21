@@ -40,14 +40,11 @@
             <properties>
                 <revision>${versionNumber}-SNAPSHOT</revision>
             </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
         <profile>
             <id>stable</id>
             <properties>
-                <revision>${versionNumber}-RELEASE</revision>
+                <revision>${versionNumber}</revision>
             </properties>
         </profile>
     </profiles>

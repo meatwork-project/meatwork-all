@@ -12,4 +12,4 @@
 	url = https://github.com/Taliro/mycra-ui.git
 [submodule "meatwork-test"]
 	path = meatwork-test
-	url = https://github.com/meatwork-project/meatwork-test.git
+	url = git@github.com:meatwork-project/meatwork-test.git

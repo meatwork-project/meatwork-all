@@ -35,7 +35,8 @@
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
         <grpc-netty.version>1.62.2</grpc-netty.version>
         <grpc-protobuf.version>1.62.2</grpc-protobuf.version>
-        <grpc-stub.version>1.62.2</grpc-stub.version>
+        <grpc-stub.version>1.63.0</grpc-stub.version>
+        <annotations-api.version>6.0.53</annotations-api.version>
     </properties>
 
     <profiles>
@@ -103,18 +104,25 @@
             </dependency>
             <dependency>
                 <groupId>io.grpc</groupId>
-                <artifactId>grpc-netty</artifactId>
-                <version>${grpc-netty.version}</version>
+                <artifactId>grpc-netty-shaded</artifactId>
+                <version>grpc-stub.version</version>
+                <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-protobuf</artifactId>
-                <version>${grpc-protobuf.version}</version>
+                <version>grpc-stub.version</version>
             </dependency>
             <dependency>
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-stub</artifactId>
-                <version>${grpc-stub.version}</version>
+                <version>grpc-stub.version</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>annotations-api</artifactId>
+                <version>${annotations-api.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

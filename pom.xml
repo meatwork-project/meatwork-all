@@ -105,18 +105,18 @@
             <dependency>
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-netty-shaded</artifactId>
-                <version>grpc-stub.version</version>
+                <version>${grpc-stub.version}</version>
                 <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-protobuf</artifactId>
-                <version>grpc-stub.version</version>
+                <version>${grpc-stub.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-stub</artifactId>
-                <version>grpc-stub.version</version>
+                <version>${grpc-stub.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.tomcat</groupId>

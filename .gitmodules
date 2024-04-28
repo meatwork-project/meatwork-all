@@ -7,3 +7,6 @@
 [submodule "meatwork-test"]
 	path = meatwork-test
 	url = git@github.com:meatwork-project/meatwork-test.git
+[submodule "meatwork-rpc"]
+	path = meatwork-test
+	url = git@github.com:meatwork-project/meatwork-rpc.git

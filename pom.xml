@@ -12,6 +12,7 @@
         <module>meatwork-cmd</module>
         <module>meatwork-test</module>
         <module>meatwork-tools</module>
+        <module>meatwork-rpc</module>
     </modules>
 
     <properties>
@@ -32,6 +33,9 @@
         <logback-classic.version>1.5.6</logback-classic.version>
         <mockito-junit-jupiter.version>5.11.0</mockito-junit-jupiter.version>
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+        <grpc-netty.version>1.62.2</grpc-netty.version>
+        <grpc-protobuf.version>1.62.2</grpc-protobuf.version>
+        <grpc-stub.version>1.62.2</grpc-stub.version>
     </properties>
 
     <profiles>
@@ -96,6 +100,21 @@
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-junit-jupiter</artifactId>
                 <version>${mockito-junit-jupiter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty</artifactId>
+                <version>${grpc-netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc-protobuf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc-stub.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

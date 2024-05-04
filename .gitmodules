@@ -1,6 +1,6 @@
 [submodule "meatwork-core"]
 	path = meatwork-core
-	url = https://github.com/meatwork-project/meatwork-core.git
+	url = git@github.com:meatwork-project/meatwork-core.git
 [submodule "meatwork-cmd"]
 	path = meatwork-cmd
 	url = https://github.com/meatwork-project/meatwork-cmd.git

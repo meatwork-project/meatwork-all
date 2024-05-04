@@ -29,7 +29,7 @@ jobs:
         settings-path: ${{ github.workspace }}
 
     - name: Build with Maven
-      run: mvn -B package -P stable --file pom.xml
+      run: mvn -B -Xtest package -P stable --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -P stable -s $GITHUB_WORKSPACE/settings.xml

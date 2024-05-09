@@ -13,3 +13,6 @@
 [submodule "meatwork-event"]
 	path = meatwork-event
 	url = git@github.com:meatwork-project/meatwork-event.git
+[submodule "meatwork-desktop"]
+	path = meatwork-desktop
+	url = git@github.com:meatwork-project/meatwork-desktop.git

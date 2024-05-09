@@ -14,6 +14,7 @@
         <module>meatwork-test</module>
         <module>meatwork-rpc</module>
         <module>meatwork-event</module>
+        <module>meatwork-desktop</module>
     </modules>
 
     <properties>
@@ -22,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <lombok.version>1.18.32</lombok.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-        <versionNumber>1.1.0</versionNumber>
+        <versionNumber>1.2.0</versionNumber>
         <guava.version>33.1.0-jre</guava.version>
         <guice.version>7.0.0</guice.version>
         <reflections.version>0.10.2</reflections.version>
@@ -58,16 +59,6 @@
 
     <dependencyManagement>
         <dependencies>
-<!--            <dependency>-->
-<!--                <groupId>com.google.guava</groupId>-->
-<!--                <artifactId>guava</artifactId>-->
-<!--                <version>${guava.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.google.inject</groupId>-->
-<!--                <artifactId>guice</artifactId>-->
-<!--                <version>${guice.version}</version>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>org.reflections</groupId>
                 <artifactId>reflections</artifactId>

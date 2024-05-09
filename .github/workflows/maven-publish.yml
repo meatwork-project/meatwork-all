@@ -28,7 +28,7 @@ jobs:
 
       - name: Determine profile
         id: determine_profile
-        run: echo name=profile::$(if [ $(jq '.release.prerelease' $GITHUB_EVENT_PATH) == "true" ]; then echo "development"; else echo "stable"; fi) >> $GITHUB_OUTPUT
+        run: echo profile=$(if [ $(jq '.release.prerelease' $GITHUB_EVENT_PATH) == "true" ]; then echo "development"; else echo "stable"; fi) >> $GITHUB_OUTPUT
 
       - name: Build with Maven
         run: mvn -B -DskipTests package -P ${{ steps.determine_profile.outputs.profile }} --file pom.xml

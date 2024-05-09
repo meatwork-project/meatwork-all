@@ -26,14 +26,14 @@ jobs:
           server-id: github
           settings-path: ${{ github.workspace }}
 
-      - name: Check if it's a pre-release
-        id: check_prerelease
-        run: echo ::set-output name=is_prerelease::$(jq '.release.prerelease' $GITHUB_EVENT_PATH)
+      - name: Determine profile
+        id: determine_profile
+        run: echo name=profile::$(if [ $(jq '.release.prerelease' $GITHUB_EVENT_PATH) == "true" ]; then echo "development"; else echo "stable"; fi) >> $GITHUB_OUTPUT
 
       - name: Build with Maven
-        run: mvn -B -DskipTests package -P $(if [ "${{ steps.check_prerelease.outputs.is_prerelease }}" == "true" ]; then echo "development"; else echo "stable"; fi) --file pom.xml
+        run: mvn -B -DskipTests package -P ${{ steps.determine_profile.outputs.profile }} --file pom.xml
 
       - name: Publish to GitHub Packages Apache Maven
-        run: mvn deploy -DskipTests -P stable -s $GITHUB_WORKSPACE/settings.xml
+        run: mvn deploy -DskipTests -P ${{ steps.determine_profile.outputs.profile }} -s $GITHUB_WORKSPACE/settings.xml
         env:
           GITHUB_TOKEN: ${{ secrets.token }}

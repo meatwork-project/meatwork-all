@@ -16,3 +16,15 @@
 [submodule "meatwork-desktop"]
 	path = meatwork-desktop
 	url = git@github.com:meatwork-project/meatwork-desktop.git
+[submodule "meatwork-common"]
+	path = meatwork-common
+	url = git@github.com:meatwork-project/meatwork-common.git
+[submodule "meatwork-orm"]
+	path = meatwork-orm
+	url = git@github.com:meatwork-project/meatwork-orm.git
+[submodule "meatwork-orm-h2"]
+	path = meatwork-orm-h2
+	url = git@github.com:meatwork-project/meatwork-orm-h2.git
+[submodule "meatwork-orm-plugin"]
+	path = meatwork-orm-plugin
+	url = git@github.com:meatwork-project/meatwork-orm-plugin.git
